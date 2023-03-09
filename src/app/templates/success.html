@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Your ORCID iD is Connected</h1>
+<div class="row">
+  <div class="col-md-8">
+    <p>Congratulations, <strong>{{ firstname }} {{ lastname }}</strong>, you have successfully connected your ORCID record to your CaneID.</p>
+    <p>Your ORCID iD is:</p>
+      <p><a href="{{ orcid_url }}/{{ orcid_id }}" target="_blank" style="white-space: nowrap;">
+      <img alt="ORCID iD" class="icon" src="/static/orcid_24x24.png">{{ orcid_url }}/{{ orcid_id }}</a></p>
+    <h3>Next Steps</h3>
+    <p>Use your ORCID iD for all your research and scholarship communications: on your publications, when applying for funding, on your webpages, and on social platforms such as LinkedIn.</p>
+  </div>
+    <!-- side pannel -->
+  <div class="col-md-4 mt-5 mt-md-0">
+    <div class="feature-light p-3">
+      <h3>Scholarship@Miami</h3>
+      <p>Go to <a href="https://scholarship.miami.edu/esploro/">Scholarship@Miami</a> to see the University of Miami's research output.</p>
+    </div>
+    <p>&nbsp;</p>
+    <div class="feature-light p-3">
+      <h3>Find Out More About ORCID</h3>
+      <p>To learn more about ORCID, visit <a href="https://orcid.org" target="_blank">https://orcid.org</a> or the University of Miami's <a href="https://sp.library.miami.edu/subjects/ORCID" target="_blank">ORCID Resource Guide</a>.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

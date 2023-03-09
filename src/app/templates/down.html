@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Down for Maintenance</h1>
+<div class="alert alert-danger p-3" role="alert">
+  <p>The University of Miami ORCID Connection app is down for maintenance. Sorry for the inconvenience.</p>
+  <p>If you have any questions, please contact <a href="mailto:{{ config['EMAIL_SUPPORT'] }}">{{ config['EMAIL_SUPPORT'] }}</a>.</p>
+</div>
+{% endblock %}

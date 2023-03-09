@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Connect your ORCID iD</h1>
+<div class="alert alert-danger p-3" role="alert">
+  <p>The connection between ORCID and the University of Miami has <strong>failed</strong>.</p>
+  {% if orcid_status == 'mismatch' %}
+    <p>You already have an ORCID in the University of Miami system, but it is not the same as the one you just tried to register.</p>
+  {% elif orcid_status == 'access_denied' %}
+    <p>You have denied ORCID access to connect your ORCID iD. If you would still like to connect, please repeat Step Three and click "Authorize".</p>
+  {% elif orcid_status == 400 %}
+    <p>There was an internal server error.</p>
+{% endif %}
+<p>Please contact <a href="mailto:{{ support_email }}">{{ support_email }}</a>.</p>
+</div>
+<p class="mt-4">NOTE: If you are on a public computer remember to <a href="https://auth.miami.edu/adfs/ls/?wa=wsignoutcleanup1.0">logout</a>.</p>
+{% endblock %}

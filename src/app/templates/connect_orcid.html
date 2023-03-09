@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Connect your ORCID iD</h1>
+<div class="py-3 position-relative">
+  <div class="connecting-line"></div>
+	<ul class="list-unstyled d-flex flex-row flex-nowrap justify-content-center connection-steps">
+		<li class="mr-5"><span>1</span> Create ORCID iD</li>
+		<li class="mr-5"><span>2</span> Log in to UM</li>
+		<li class="active"><span>3</span> Connect to ORCID</li>
+	</ul>
+</div>
+<p class="mb-4"><strong>Step 3:</strong> Connect to ORCID, and "Authorize" ORCID to share your iD with the University of Miami.</p>
+<p class="mb-4"><strong>Note:</strong> You will need your ORCID iD (or email) and password to log in to ORCID.</p>
+<a href="/orcid" class="btn btn-orcid ml-3"><img alt="ORCID logo" src="/static/orcid_24x24.png" width="24" height="24" /> Connect to ORCID</a>
+
+{% if session['orcid_status'] == 'access_denied' %}
+<div class="alert alert-danger p-3 mt-4" role="alert">
+  The connection between ORCID and the University of Miami has <strong>failed</strong>. You denied ORCID access to connect your ORCID iD.<br /><br /> If you would still like to connect, please repeat Step Three and click "Authorize".
+</div>
+{% endif %}
+{% endblock %}

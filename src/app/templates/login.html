@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Connect your ORCID iD</h1>
+<div class="py-3 position-relative">
+  <div class="connecting-line"></div>
+	<ul class="list-unstyled d-flex flex-row flex-nowrap justify-content-center connection-steps">
+		<li class="mr-5"><span>1</span> Create ORCID iD</li>
+		<li class="mr-5 active"><span>2</span> Log in to UM</li>
+		<li><span>3</span> Connect to ORCID</li>
+	</ul>
+</div>
+<p class="mb-4"><strong>Step 2:</strong> Log in to the University of Miami</p>
+<a href="/?sso2" class="btn btn-default mb-0 ml-3">Log in to UM</a>
+{% endblock %}

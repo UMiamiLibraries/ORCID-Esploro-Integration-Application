@@ -1,0 +1,73 @@
+.current {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+.btn-orcid {
+    text-decoration: none;
+    background-color: #F2F2F2;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-orcid:hover, .btn-orcid:focus, .btn-orcid:active {
+    background-color:#dddddd;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-orcid img {
+    vertical-align: middle;
+}
+
+.btn:focus, .btn:active {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.connection-steps li {
+    position: relative;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.connection-steps li.active {
+    color: #0db02b;
+}
+
+.connection-steps li span {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.5rem);
+    display: block;
+    margin-top: -2.25rem;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    padding: 0 0.5rem;
+    color: #666666;
+    font-weight: 600;
+    border: 1px solid #dddddd;
+}
+
+.connection-steps li.active span {    
+    background-color: #0db02b;
+    color: #FFFFFF;
+    border: 1px solid #0db02b;
+}
+
+.connecting-line {
+    height: 1px;
+    background: #dddddd;
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    z-index: 1;
+}
+
+.modal-content {
+    border-radius: 0.25rem;
+}

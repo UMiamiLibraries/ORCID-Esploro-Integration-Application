@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Connect your ORCID iD</h1>
+<div class="py-3 position-relative">
+  <div class="connecting-line"></div>
+	<ul class="list-unstyled d-flex flex-row flex-nowrap justify-content-center connection-steps">
+		<li class="mr-5 active"><span>1</span> Create ORCID iD</li>
+		<li class="mr-5"><span>2</span> Log in to UM</li>
+		<li><span>3</span> Connect to ORCID</li>
+	</ul>
+</div>
+
+<p class="mb-4"><strong>Step 1:</strong> If you do not already have an ORCID iD, create one now.</p>
+<p class="mb-4"><strong>Important: Once you have completed registration, you must return to this tab in your browser and proceed to Step 2.</strong></p>
+
+<button type="button" class="btn btn-default mb-0 ml-3" data-toggle="modal" data-target="#returnConfirmationModal">
+  Create ORCID iD Now
+</button>
+
+<div class="modal fade" id="returnConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="returnConfirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="returnConfirmationModalLabel">Redirecting to ORCID Website</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p><strong>Important:</strong> After completing your ORCID signup, return to this tab to complete your integration with Scholarship@Miami.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="openLinks()">Ok, I'll be back</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

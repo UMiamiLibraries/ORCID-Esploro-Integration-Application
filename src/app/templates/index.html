@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Connect your ORCID iD</h1>
+<div class="row">
+  <div class="col-md-8">
+    <p>Your ORCID Account will be connected with Scholarship@Miami, the University of Miami Libraries' research information hub & institutional repository. Having an ORCID iD will raise the level of discovery for your work and help us create a complete bibliographic record of your research.</p>
+    <p>Please choose one of the two options below to begin the process:</p>
+    <div class="mx-3">
+      <a href="/login" class="btn btn-default mb-0 mr-3">I Have an ORCID iD</a>
+      <a href="/create_orcid" class="btn btn-orcid mb-0">I Don't Have an ORCID iD</a>
+    </div>
+    <br /></br />
+    <p>* Don't know if you have an ORCID iD? Please select the "I Don't Have an ORCID iD" button.</p>
+  </div>
+
+    <!-- side pannel -->
+  <div class="col-md-4 mt-5 mt-md-0">
+    <div class="feature-light p-3">
+      <h3>Find Out More About ORCID</h3>
+      <p>To learn more about ORCID, visit <a href="https://orcid.org" target="_blank">https://orcid.org</a> or the University of Miami's <a href="https://sp.library.miami.edu/subjects/ORCID" target="_blank">ORCID Resource Guide</a>.</p>
+    </div>
+  </div>  
+</div>
+{% endblock %}
