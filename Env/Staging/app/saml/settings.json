@@ -1,29 +1,30 @@
 {
     "strict": true,
-    "debug": false,
+    "debug": true,
     "sp": {
-        "entityId": "https://orcid-dev.scholarship.miami.edu/metadata/",
+        "entityId": "https://<sp_domain>/metadata/",
         "assertionConsumerService": {
-            "url": "https://orcid-dev.scholarship.miami.edu/?acs",
+            "url": "https://<sp_domain>/?acs",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
         },
         "singleLogoutService": {
-            "url": "https://orcid-dev.scholarship.miami.edu/?sls",
+            "url": "https://<sp_domain>/?sls",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
-        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+        "x509cert": "",
+        "privateKey": ""
     },
     "idp": {
-        "entityId": "http://auth.miami.edu/adfs/services/trust",
+        "entityId": "https://app.onelogin.com/saml/metadata/<onelogin_connector_id>",
         "singleSignOnService": {
-            "url": "https://auth.miami.edu/adfs/ls/",
+            "url": "https://app.onelogin.com/trust/saml2/http-post/sso/<onelogin_connector_id>",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
         "singleLogoutService": {
-            "url": "https://auth.miami.edu/adfs/ls/?wa=wsignoutcleanup1.0",
+            "url": "https://app.onelogin.com/trust/saml2/http-redirect/slo/<onelogin_connector_id>",
             "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
         },
-        "x509cert": "MIIC2DCCAcCgAwIBAgIQal50oKnAkrlB3fOxZDJwKjANBgkqhkiG9w0BAQsFADAo\nMSYwJAYDVQQDEx1BREZTIFNpZ25pbmcgLSBhdXRoLm1pYW1pLmVkdTAeFw0xODA4\nMTQyMDU4NTlaFw0zODA4MDkyMDU4NTlaMCgxJjAkBgNVBAMTHUFERlMgU2lnbmlu\nZyAtIGF1dGgubWlhbWkuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC\nAQEAj/aMKewu6Y0ujtH4l6278HSLAGAMiAo59wMmy3nYm2qgOnVJw3FuYsDcWlWL\np852TzbPDGobpZIjEAomzNIXSgAkvU8PQzM57DxXT6n4cpuSzhOLALjUA6lIG8K8\nPXL86sB0zsEdcs7ngjjN+8ZqmQpoo03EsRKozKd/mkbD6xr07xVXXq1yuqooSYBq\n6PAPYnFdGvX5Vzzyahkugljq/HRsjhaY7WEtgqbThyfr5rmEO4fYUBVl8jBebDfz\nm0QkCqeC4gDFhQBUxn00+LjQJTAOGxBp06lWotFp+GZ1zLz0i0JFyDToJFGqO5No\nfd9zhQhKaLFvUytwzu8K8zZPkwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCLX9Mw\nljMvpzM8wQ/+JOefqtyrTjwSVAxjYM+rMSDQV7FWPeadbNZOXk7qUCQLjg5dKphk\nesfphPsx85TLOV6sFq+1iyZjuEM3rQa8liQXOvRFXjkH0htW2Asncyzz60J05lIu\nxuMIgWbvrpj8dAEFEFGIpoYw5Hut7HhsorDW0L4gP6fjuQPJWyIZZrNvS5DkLKky\nYYX7Vf2NYirbsGls4iNgpECKmMb7qByO2D0NBfr4GNVrmM53aOB00KPvLp9GTWtV\nwdgQqICPIURhXZ6dhUl3Pk4I4SjQyHFCnsc8NIWy3G88XQabPYqX4ZuZQ79x9xS1\ncPCzDKcS9E8pelu+"
-
+        "x509cert": "<onelogin_connector_cert>"
     }
 }

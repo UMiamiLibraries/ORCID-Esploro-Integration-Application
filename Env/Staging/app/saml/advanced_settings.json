@@ -17,19 +17,19 @@
     },
     "contactPerson": {
         "technical": {
-            "givenName": "Charles Brown-Roberts",
-            "emailAddress": "cgb37@maimi.edu"
+            "givenName": "technical_name",
+            "emailAddress": "technical@example.com"
         },
         "support": {
-            "givenName": "Eddie Prieto",
-            "emailAddress": "eprieto502@miami.edu"
+            "givenName": "support_name",
+            "emailAddress": "support@example.com"
         }
     },
     "organization": {
         "en-US": {
-            "name": "University of Miami",
-            "displayname": "University of Miami",
-            "url": "https://miami.edu"
+            "name": "sp_test",
+            "displayname": "SP test",
+            "url": "http://sp.example.com"
         }
     }
 }
